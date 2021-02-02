@@ -19,6 +19,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 <launch>
     <arg name="publish_urdf"         default="true" />
     <arg name="use_rviz"         default="false" />
+    <arg name="publish_tf"         default="false" />
+
 
     <!-- CAMERA 1 -->
     <arg name="node_name_1"          default="zed_node_a" />
@@ -70,7 +72,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <arg name="node_name"           value="$(arg node_name_1)" />
             <arg name="camera_model"        value="$(arg camera_model_1)" />
             <arg name="publish_urdf"        value="$(arg publish_urdf)" />
-            <arg name="publish_tf"          value="true" />
+            <arg name="publish_tf"          value="$(arg publish_tf)" />
             <arg name="camera_id"           value="0" />
         </include>
     </group>
